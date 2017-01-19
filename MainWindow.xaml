@@ -1,0 +1,96 @@
+﻿<Window x:Class="KinectV22015.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KinectV22015"
+        mc:Ignorable="d"
+       WindowStyle="None" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Title="MainWindow" Height="1920" Width="1080" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Background="Black" Closing="Window_Closing" MouseDown="Window_MouseDown">
+    <Grid x:Name="ContentRoot" HorizontalAlignment="Left" Width="1080" Height="1920">
+
+        <Image Name="imageLogo" Margin="568,112,626,296" />
+        <Image Name="imageSelect" Margin="707,0,791,641" Height="400" Width="400" />
+        <Image Name="imageEasy" Margin="707,247,791,394" Height="400" Width="400"/>
+        <!--
+        <Image Name="imageNormal" Margin="707,506,791,135" Height="400" Width="400"/> -->
+
+        <Image Name="imageHard" Margin="707,751,791,-110" Height="400" Width="400" />
+
+
+
+        <Image Name="imageReady" Margin="707,0,791,641" Height="400" Width="400" />
+        <Image Name="imageStart" Margin="707,0,791,641" Height="400" Width="400" />
+        <Image Name="imageFight" Margin="707,0,791,641" Height="400" Width="400" />
+        <!--
+        <Image Name="imageTime" Margin="707,751,791,-110" Height="400" Width="400" /> -->
+
+        <Label BorderThickness="0" FontSize="80" IsEnabled="True" Name="labelTime" Content="TIME" Background="{x:Null}" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="1250,75,0,0" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Height="105"/>
+        <Label BorderThickness="0" FontSize="80" Height="90" IsEnabled="True" Name="labelCountTime" Content="00 : 00 : 00" Background="{x:Null}" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="1250,156,0,0" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Width="343"/>
+
+
+        <Image Name="imageLogoOver" Margin="707,12,791,629" Height="400" Width="400" />
+        <Image Name="imageScore" Margin="488,581,1010,60" Height="400" Width="400" />
+        <Image Name="imageYouwin" Margin="488,242,1010,399" Height="400" Width="400" />
+        <Image Name="imageGameOver" Margin="1009,331.5,511,348.5" Height="400" Width="400" d:LayoutOverrides="VerticalAlignment" />
+
+        <Image Name="imageHighscore" Margin="618,172,685,354" />
+
+        <Image Height="240" HorizontalAlignment="Left" Margin="0,801,0,0" Name="imageColor" Stretch="Fill" VerticalAlignment="Top" Width="320" Opacity="1" ></Image>
+        <Image Height="240" HorizontalAlignment="Left" Margin="568,506,0,0" Name="imageDepth" Stretch="Fill" VerticalAlignment="Top" Width="320" Opacity="1" ></Image>
+        
+        <Image Name="Name11" Height="100" Width="100"/>
+        <Image Name="Name12"  Height="100" Width="100"/>
+        <Image Name="Name13"  Height="100" Width="100"/>
+        <Image Name="Score11" Height="100" Width="100" />
+        <Image Name="Score12" Height="100" Width="100"/>
+
+        <Image Name="Name21" Height="100" Width="100"/>
+        <Image Name="Name22"  Height="100" Width="100"/>
+        <Image Name="Name23"  Height="100" Width="100"/>
+        <Image Name="Score21"  Height="100" Width="100" />
+        <Image Name="Score22" Height="100" Width="100"/>
+
+        <Image Name="Name31" Height="100" Width="100"/>
+        <Image Name="Name32"  Height="100" Width="100"/>
+        <Image Name="Name33"  Height="100" Width="100"/>
+        <Image Name="Score31"  Height="100" Width="100" />
+        <Image Name="Score32" Height="100" Width="100"/>
+
+        <Image Name="Name41" Margin="1113,547,685,394" Height="100" Width="100"/>
+        <Image Name="Name42" Margin="707,312,861,629" Height="100" Width="100"/>
+        <Image Name="Name43" Margin="558,476,1240,465" Height="100" Width="100"/>
+        <Image Name="Score41" Margin="558,112,1170,829" Height="100" Width="100" />
+        <Image Name="Score42" Margin="1072,172,726,769" Height="100" Width="100"/>
+
+        <Image Name="imageTarget1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1110,545,0,0" Height="100" Width="100"/>
+        <Image Name="imageTarget2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="820,350,0,0" Height="100" Width="100"/>
+        <Image Name="imageTarget3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,475,0,0" Height="100" Width="100"/>
+        <Image Name="imageTarget4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,130,0,0" Height="100" Width="100" />
+        <Image Name="imageTarget5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1070,170,0,0" Height="100" Width="100"/>
+
+        <Image Name="imagehandLeft" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" VerticalAlignment="Top" Width="100" Height="100" ></Image>
+        <Image Name="imagehandRight" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" VerticalAlignment="Top" Width="100" Height="100" ></Image>
+
+        <Canvas  Name="canvas1" Margin="0,0,842,0">
+            <Image  Canvas.Left="50" Canvas.Top="300" Height="60" Name="Righthand" Stretch="Fill" Width="60"/>
+            <Image Height="60" Name="Lefthand" Stretch="Fill" Width="60" Margin="50,440,1788,541" />
+        </Canvas>
+
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="frameratetext" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Yellow" FontFamily="Agency FB" Opacity="1" Margin="1083,978,-72,38" />
+
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelzHandLeft" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Blue" FontFamily="Agency FB" Opacity="1" Margin="500,155.5,-46,860.5" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelxHandLeft" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Blue" FontFamily="Agency FB" Opacity="1" Margin="500,21,-116,995" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelyHandLeft" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Blue" FontFamily="Agency FB" Opacity="1" Margin="500,86,-151,930" />
+
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelxHandRight" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Green" FontFamily="Agency FB" Opacity="1" Margin="0,-500,920,993.5" d:LayoutOverrides="HorizontalAlignment" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelzHandRight" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Green" FontFamily="Agency FB" Opacity="1" Margin="0,-450.5,863,860.5" d:LayoutOverrides="HorizontalAlignment" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelyHandRight" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="Green" FontFamily="Agency FB" Opacity="1" Margin="0,-200.5,868,929.5" d:LayoutOverrides="HorizontalAlignment"  />
+
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelMaginTargetLeft" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="500,753,1366,263" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelMaginTargetTop" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="500,909,1309,107" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelMaginTargetRight" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="500,822,1366,194" />
+        <TextBox BorderThickness="0" FontSize="50" Height="64" IsEnabled="True" Name="LabelMaginTargetBottom" Text="0" Background="{x:Null}" AcceptsReturn="False" Foreground="White" FontFamily="Agency FB" Opacity="1" Margin="500,978,1309,38" />
+
+    </Grid>
+</Window>
